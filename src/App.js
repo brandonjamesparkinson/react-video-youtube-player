@@ -1,22 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ReactPlayer from "react-player";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>React Video Player Demo</p>
+        <div>
+          <input
+            className="form-control"
+            style={{ marginBottom: 20 }}
+            type="text"
+            placeholder="Input Video URL"
+          />
+        </div>
+        <div>
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            controls={true}
+          />
+        </div>
       </header>
     </div>
   );
